@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dapur Mamaho - Homemade Desserts</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <div class="logo">🍰 Dapur Mamaho</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Tentang Kami</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Galeri</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">&#9776;</button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="hero-tag">Homemade with Love</p>
+            <h1>Dessert Lezat<br>dari Dapur Mamaho</h1>
+            <p class="hero-sub">Dessert Box, Pudding Tart, Cupcake & Brownies buatan rumahan dengan bahan premium</p>
+            <div class="hero-btns">
+                <a href="#menu" class="btn-primary">Lihat Menu</a>
+                <a href="#contact" class="btn-outline">Pesan Sekarang</a>
+            </div>
+        </div>
+        <div class="hero-image">�</div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img">
+                    <div class="about-emoji-box">
+                        <span>🧁</span><span>🍫</span>
+                        <span>🍮</span><span>🎁</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p class="section-tag">Tentang Kami</p>
+                    <h2>Dibuat dengan Cinta, Disajikan dengan Senyum</h2>
+                    <p>Dapur Mamaho adalah usaha rumahan yang menghadirkan dessert lezat dengan bahan-bahan pilihan tanpa pengawet. Setiap produk dibuat dengan penuh cinta untuk momen spesialmu.</p>
+                    <div class="stats">
+                        <div class="stat"><span>150+</span><p>Pelanggan Puas</p></div>
+                        <div class="stat"><span>4</span><p>Varian Produk</p></div>
+                        <div class="stat"><span>5★</span><p>Rating Rata-rata</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <p class="section-tag center">Menu Kami</p>
+            <h2 class="section-title center">Pilihan Dessert Terbaik</h2>
+
+            <div class="menu-filter">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="brownies">Brownies</button>
+                <button class="filter-btn" data-filter="pudding">Pudding</button>
+                <button class="filter-btn" data-filter="cupcake">Cupcake</button>
+                <button class="filter-btn" data-filter="dessertbox">Dessert Box</button>
+            </div>
+
+            <div class="menu-grid" id="menuGrid">
+                <!-- Dessert Box -->
+                <div class="menu-card" data-category="dessertbox">
+                    <div class="card-img"></div>
+                    <div class="card-body">
+                        <span class="badge dessertbox">Dessert Box</span>
+                        <h3>Dessert Box Tiramisu</h3>
+                        <p>Tiramisu klasik dalam box cantik, perpaduan kopi dan mascarpone yang creamy</p>
+                        <div class="card-footer">
+                            <span class="price">Rp 15.000</span>
+                            <button class="btn-order" onclick="openOrder('Dessert Box Tiramisu', '')">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="dessertbox">
+                    <div class="card-img"></div>
+                    <div class="card-body">
+                        <span class="badge dessertbox">Dessert Box</span>
+                        <h3>Dessert Box Red Velvet</h3>
+                        <p>Red velvet lembut dengan cream cheese frosting dalam box premium</p>
+                        <div class="card-footer">
+                            <span class="price">Rp 16.000</span>
+                            <button class="btn-order" onclick="openOrder('Dessert Box Red Velvet', '')">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="dessertbox">
+                    <div class="card-img"></div>
+                    <div class="card-body">
+                        <span class="badge dessertbox">Dessert Box</span>
+                        <h3>Dessert Box Coklat</h3>
+                        <p>Dessert coklat pekat yang kaya rasa, cocok untuk pecinta coklat sejati</p>
+                        <div class="card-footer">
+                            <span class="price">Rp 15.000</span>
+                            <button class="btn-order" onclick="openOrder('Dessert Box Coklat', '')">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pudding -->
+                <div class="menu-card" data-category="pudding">
+                    <div class="card-img"></div>
+                    <div class="card-body">
+                        <span class="badge pudding">Pudding</span>
+                        <h3>Pudding Tart Buah 19 cm</h3>
+                        <p>Pudding Tart Buah lembut ukuran 19 cm, cocok untuk 5–7 orang</p>
+                        <div class="card-footer">
+                            <span class="price">Rp 90.000</span>
+                            <button class="btn-order" onclick="openOrder('Pudding Tart 15x20 cm', 'Rp 60.000')">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="pudding">
+                    <div class="card-img"></div>
+                    <div class="card-body">
+                        <span class="badge pudding">Pudding</span>
+                        <h3>Pudding Tart Tumpeng 25 cm</h3>
+                        <p>Pudding Tart Tumpeng lembut ukuran 25 cm, cocok untuk 15-20 orang</p>
+                        <div class="card-footer">
+                            <span class="price">Rp 200.000</span>
+                            <button class="btn-order" onclick="openOrder('Pudding Tart 20x20 cm', 'Rp 75.000')">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cupcake -->
+                <div class="menu-card" data-category="cupcake">
+                    <div class="card-img"></div>
+                    <div class="card-body">
+                        <span class="badge cupcake">Cupcake</span>
+                        <h3>Cupcake (isi 9)</h3>
+                        <p>Satu box berisi 9 cupcake lembut dengan buttercream cantik warna-warni</p>
+                        <div class="card-footer">
+                            <span class="price">Rp 70.000</span>
+                            <button class="btn-order" onclick="openOrder('Cupcake isi 9', 'Rp 70.000')">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Brownies -->
+                <div class="menu-card" data-category="brownies">
+                    <div class="card-img"></div>
+                    <div class="card-body">
+                        <span class="badge">Brownies</span>
+                        <h3>Brownies 15x20 cm</h3>
+                        <p>Brownies fudgy coklat pekat ukuran 15x20 cm, lembut dan moist</p>
+                        <div class="card-footer">
+                            <span class="price">Rp 35.000</span>
+                            <button class="btn-order" onclick="openOrder('Brownies 15x15 cm', 'Rp 35.000')">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="brownies">
+                    <div class="card-img"></div>
+                    <div class="card-body">
+                        <span class="badge">Brownies</span>
+                        <h3>Brownies 20x20 cm</h3>
+                        <p>Brownies fudgy coklat pekat ukuran 20x20 cm, cocok untuk keluarga atau acara</p>
+                        <div class="card-footer">
+                            <span class="price">Rp 65.000</span>
+                            <button class="btn-order" onclick="openOrder('Brownies 30x30 cm', 'Rp 65.000')">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="testimonial">
+        <div class="container">
+            <p class="section-tag center">Testimoni</p>
+            <h2 class="section-title center">Kata Pelanggan Kami</h2>
+            <div class="testi-grid">
+                <div class="testi-card">
+                    <p class="stars">⭐⭐⭐⭐⭐</p>
+                    <p>"Browniesnya enak banget! Lembut dan coklat banget. Udah langganan dari 2021."</p>
+                    <p class="testi-name">— Sari, Jakarta</p>
+                </div>
+                <div class="testi-card">
+                    <p class="stars">⭐⭐⭐⭐⭐</p>
+                    <p>"Dessert box-nya cantik banget buat hadiah. Rasanya juga nggak kaleng-kaleng!"</p>
+                    <p class="testi-name">— Dina, Bandung</p>
+                </div>
+                <div class="testi-card">
+                    <p class="stars">⭐⭐⭐⭐⭐</p>
+                    <p>"Cupcake-nya lucu dan enak. Anak-anak suka banget. Pasti order lagi!"</p>
+                    <p class="testi-name">— Rina, Surabaya</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <p class="section-tag center">Galeri</p>
+            <h2 class="section-title center">Karya Kami</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">🍫<p>Brownies</p></div>
+                <div class="gallery-item">🍮<p>Pudding</p></div>
+                <div class="gallery-item">🧁<p>Cupcake</p></div>
+                <div class="gallery-item">🎁<p>Dessert Box</p></div>
+                <div class="gallery-item">🍰<p>Special Cake</p></div>
+                <div class="gallery-item">🎂<p>Birthday Box</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <p class="section-tag center">Kontak</p>
+            <h2 class="section-title center">Hubungi Kami</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <div>
+                            <h4>Alamat</h4>
+                            <p>De Cluster Nirwana Pandanwangi C14</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span>📱</span>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+62 877-5342-1372</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span>📸</span>
+                        <div>
+                            <h4>Instagram</h4>
+                            <p>@dapurmamaho</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span>🕐</span>
+                        <div>
+                            <h4>Jam Operasional</h4>
+                            <p>Senin - Sabtu: 08.00 - 20.00</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" placeholder="Nama Kamu" required>
+                    <input type="tel" placeholder="No. WhatsApp" required>
+                    <select>
+                        <option value="">Pilih Produk</option>
+                        <option>Brownies</option>
+                        <option>Pudding</option>
+                        <option>Cupcake</option>
+                        <option>Dessert Box</option>
+                    </select>
+                    <textarea placeholder="Pesan atau pertanyaan kamu..." rows="4"></textarea>
+                    <button type="submit" class="btn-primary full">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h3>🍰 Dapur Mamaho</h3>
+                <p>Homemade desserts dengan cinta untuk setiap momen spesialmu.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="#menu">Brownies</a></li>
+                    <li><a href="#menu">Pudding</a></li>
+                    <li><a href="#menu">Cupcake</a></li>
+                    <li><a href="#menu">Dessert Box</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Info</h4>
+                <ul>
+                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#gallery">Galeri</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2026 Dapur Mamaho. All rights reserved.</p>
+    </footer>
+
+    <!-- Order Modal -->
+    <div class="modal" id="orderModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <h2>Pesan Sekarang</h2>
+            <p id="modalProduct" class="modal-product-name"></p>
+            <form id="orderForm">
+                <input type="text" id="custName" placeholder="Nama Lengkap" required>
+                <input type="tel" id="custPhone" placeholder="No. WhatsApp" required>
+                <input type="text" id="custAddress" placeholder="Alamat Pengiriman" required>
+                <div id="variantRow" style="display:none">
+                    <select id="custVariant">
+                        <option value="">Pilih Varian Rasa</option>
+                        <option>Tiramisu</option>
+                        <option>Red Velvet</option>
+                        <option>Coklat</option>
+                    </select>
+                </div>
+                <div class="qty-row">
+                    <label>Jumlah:</label>
+                    <div class="qty-control">
+                        <button type="button" onclick="changeQty(-1)">−</button>
+                        <span id="qtyDisplay">1</span>
+                        <button type="button" onclick="changeQty(1)">+</button>
+                    </div>
+                </div>
+                <textarea id="custNotes" placeholder="Catatan tambahan (opsional)" rows="3"></textarea>
+                <button type="submit" class="btn-primary full">Pesan Sekarang �</button>t
+            </form>
+        </div>
+    </div>
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
